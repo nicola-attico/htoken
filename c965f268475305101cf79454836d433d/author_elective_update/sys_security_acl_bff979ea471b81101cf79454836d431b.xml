@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_snc_htoken_treasury</description>
+        <name>x_snc_htoken_treasury</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 12:24:57</sys_created_on>
+        <sys_id>bff979ea471b81101cf79454836d431b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_htoken_treasury</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_security_acl_bff979ea471b81101cf79454836d431b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 12:24:57</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>sys_security_acl_bff979ea471b81101cf79454836d431b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_snc_htoken_treasury</description><name>x_snc_htoken_treasury</name><operation display_value="read">read</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-05-09 12:24:57</sys_created_on><sys_id>bff979ea471b81101cf79454836d431b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_htoken_treasury</sys_name><sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package><sys_policy/><sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope><sys_update_name>sys_security_acl_bff979ea471b81101cf79454836d431b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-05-09 12:24:57</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-680370268</payload_hash>
+        <record_name>x_snc_htoken_treasury</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 12:24:57</sys_created_on>
+        <sys_id>f3f979ea471b81101cf79454836d431e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>180a8c7a4330000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 12:24:57</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>3ff979eaa61b81103ac3702a7434fe1d</update_guid>
+        <update_guid_history>3ff979eaa61b81103ac3702a7434fe1d:-680370268</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-18 10:37:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>258dd054215443c4bcb693a66a7f1390</sys_id>
+        <sys_metadata>bff979ea471b81101cf79454836d431b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_htoken_treasury</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent display_value="">3ff979ea471b81101cf79454836d432b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>sys_security_acl_bff979ea471b81101cf79454836d431b</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_bff979ea471b81101cf79454836d431b">f3f979ea471b81101cf79454836d431e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-18 10:37:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

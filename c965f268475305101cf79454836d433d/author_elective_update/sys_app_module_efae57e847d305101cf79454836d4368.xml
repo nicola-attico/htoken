@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Token Management">d95a766c475305101cf79454836d4389</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Token Balances</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_snc_htoken_st_token_balance</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_snc_htoken.token_balance_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-03 14:36:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>efae57e847d305101cf79454836d4368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token Balances</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_app_module_efae57e847d305101cf79454836d4368</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-03 14:36:59</sys_updated_on>
+        <timeline_page/>
+        <title>Token Balances</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>sys_app_module_efae57e847d305101cf79454836d4368</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Token Management">d95a766c475305101cf79454836d4389</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Token Balances</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_snc_htoken_st_token_balance</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_snc_htoken.token_balance_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-05-03 14:36:59</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>efae57e847d305101cf79454836d4368</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Token Balances</sys_name><sys_overrides/><sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package><sys_policy/><sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope><sys_update_name>sys_app_module_efae57e847d305101cf79454836d4368</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-05-03 14:36:59</sys_updated_on><timeline_page/><title>Token Balances</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>1584253688</payload_hash>
+        <record_name>Token Balances</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-03 14:36:59</sys_created_on>
+        <sys_id>afae57e847d305101cf79454836d436a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1808a5a5eac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-03 14:36:59</sys_updated_on>
+        <type>Module</type>
+        <update_guid>e7ae57e846d305107aec2507d7741d6a</update_guid>
+        <update_guid_history>e7ae57e846d305107aec2507d7741d6a:1584253688</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Token Balances">f5736320471705101cf79454836d430b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-03 14:57:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>b43d295c124c44a89c2499d8585c9790</sys_id>
+        <sys_metadata>efae57e847d305101cf79454836d4368</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token Balances</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>sys_app_module_efae57e847d305101cf79454836d4368</sys_update_name>
+        <sys_update_version display_value="sys_app_module_efae57e847d305101cf79454836d4368">afae57e847d305101cf79454836d436a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-03 14:57:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

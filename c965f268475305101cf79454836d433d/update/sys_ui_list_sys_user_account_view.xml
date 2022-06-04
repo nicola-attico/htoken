@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sys_user" version="2" view="account_view">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>user_name</element>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="6928cbb047df05101cf79454836d43f3">0d58cfb047df05101cf79454836d436a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 07:37:49</sys_created_on>
+            <sys_id>c558cfb047df05101cf79454836d436b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 07:37:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_snc_htoken_account</element>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="6928cbb047df05101cf79454836d43f3">0d58cfb047df05101cf79454836d436a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 07:37:49</sys_created_on>
+            <sys_id>c958cfb047df05101cf79454836d436b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 07:37:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="6928cbb047df05101cf79454836d43f3">0d58cfb047df05101cf79454836d436a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 07:37:49</sys_created_on>
+            <sys_id>cd58cfb047df05101cf79454836d436b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 07:37:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="6928cbb047df05101cf79454836d43f3">0d58cfb047df05101cf79454836d436a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 07:37:49</sys_created_on>
+            <sys_id>c158cfb047df05101cf79454836d436c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 07:37:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_user</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 07:37:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d58cfb047df05101cf79454836d436a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_user</sys_name>
+            <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+            <sys_update_name>sys_ui_list_sys_user_account_view</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 07:37:49</sys_updated_on>
+            <sys_user/>
+            <view display_value="Account view" name="account_view">6928cbb047df05101cf79454836d43f3</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

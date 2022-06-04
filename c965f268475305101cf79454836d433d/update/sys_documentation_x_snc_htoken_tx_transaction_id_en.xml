@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="transaction_id" label="Transaction Id" language="en" table="x_snc_htoken_tx">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>transaction_id</element>
+            <help/>
+            <hint/>
+            <label>Transaction Id</label>
+            <language>en</language>
+            <name>x_snc_htoken_tx</name>
+            <plural>Transaction Ids</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-18 12:18:41</sys_created_on>
+            <sys_id>abde08a147a3c5101cf79454836d43dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Transaction Id</sys_name>
+            <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_htoken_tx_transaction_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-18 12:18:41</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

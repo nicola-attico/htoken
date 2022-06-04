@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-sandiego-12-22-2021__patch3-04-27-2022_05-06-2022_1135.zip</compiler_build>
+        <copied_from>78a4d77c47df05101cf79454836d43fc</copied_from>
+        <copied_from_name>Generate key and account</copied_from_name>
+        <description/>
+        <internal_name>generate_key_and_account_for_treasury</internal_name>
+        <label_cache>[{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.response","label":"2 - create_account➛response","reference_display":"response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"c0df6deb-c1ce-452f-b9a1-633445b8e3b9"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.public_key","label":"1➛key➛Public Key","reference":"","reference_display":"Public Key","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_key","column_name":"public_key"},{"name":"subflow.treasury","label":"Input➛treasury","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d4affa48-e036-46bc-9d57-1ca7c07ae37c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.user","label":"Input➛user","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"9f55c918-a45c-43e0-b1b2-ed7847368840"}},{"name":"subflow.user.x_snc_htoken_account.account_id","label":"Input➛user➛Account➛Account Id","reference":"","reference_display":"Account Id","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_account","column_name":"account_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.public_key","label":"1➛public_key","reference_display":"public_key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"de7a523f-769e-426d-8a49-3a900edda609"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.record","label":"3 - Update Record➛Treasury Record","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.table_name","label":"3 - Update Record➛Treasury Table","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__action_status__","label":"3 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__dont_treat_as_error__","label":"3 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account","label":"2 - create_account➛account","reference":"x_snc_hspoke_account","reference_display":"Account","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7934492a-b5cc-41c6-b700-7d55579e1015"}},{"name":"subflow.user.user_name","label":"Input➛user➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.sys_id","label":"1➛key➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_key","column_name":"sys_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account.sys_id","label":"2 - create_account➛account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_account","column_name":"sys_id"}]</label_cache>
+        <master_snapshot>b225ce66475b81101cf79454836d434b</master_snapshot>
+        <name>Generate key and account for treasury</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>59940666475b81101cf79454836d4380</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Generate key and account for treasury</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_hub_flow_59940666475b81101cf79454836d4380</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:16</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=59940666475b81101cf79454836d4380"/>
+    <sys_variable_value action="DELETE" query="document_key=59940666475b81101cf79454836d4380"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380^id=59940666475b81101cf79454836d4380"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=59940666475b81101cf79454836d4380"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=59940666475b81101cf79454836d4380"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=59940666475b81101cf79454836d4380^sys_idNOT IN59940666475b81101cf79454836d4381"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>59940666475b81101cf79454836d4380</id>
+        <name>Generate key and account for treasury</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:12</sys_created_on>
+        <sys_id>59940666475b81101cf79454836d4381</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:11:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=59940666475b81101cf79454836d4381"/>
+    <sys_hub_flow_input action="DELETE" query="model=59940666475b81101cf79454836d4380^sys_idNOT INa1e48a66475b81101cf79454836d4372"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=d4affa48-e036-46bc-9d57-1ca7c07ae37c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_htoken_treasury</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>treasury</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>treasury</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</model>
+        <model_id>59940666475b81101cf79454836d4380</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_htoken_treasury">x_snc_htoken_treasury</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:12:35</sys_created_on>
+        <sys_id>a1e48a66475b81101cf79454836d4372</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:12:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=59940666475b81101cf79454836d4380^sys_idNOT IN06f2e66247db81101cf79454836d43aa,06f2e66247db81101cf79454836d43b0"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=690d1e21-4fdb-4c12-8c81-df562013def1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>key</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>key</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</model>
+        <model_id>59940666475b81101cf79454836d4380</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:58</sys_created_on>
+        <sys_id>06f2e66247db81101cf79454836d43aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3f23f16d-942a-4d4e-a159-549266315f2e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>account_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>account_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</model>
+        <model_id>59940666475b81101cf79454836d4380</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:58</sys_created_on>
+        <sys_id>06f2e66247db81101cf79454836d43b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=59940666475b81101cf79454836d4380"/>
+    <sys_hub_action_instance action="DELETE" query="flow=59940666475b81101cf79454836d4380^sys_idNOT IN42f2e66247db81101cf79454836d43d0,daf2e66247db81101cf79454836d43df,f9944666475b81101cf79454836d4309"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_type display_value="generate_key">5705df7c47df05101cf79454836d43d2</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:58</sys_created_on>
+        <sys_id>42f2e66247db81101cf79454836d43d0</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:16</sys_updated_on>
+        <ui_id>bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=42f2e66247db81101cf79454836d43d0"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=42f2e66247db81101cf79454836d43d0"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=42f2e66247db81101cf79454836d43d0"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="create_account">25768ae6475b81101cf79454836d43f9</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:59</sys_created_on>
+        <sys_id>daf2e66247db81101cf79454836d43df</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:16</sys_updated_on>
+        <ui_id>162a9e14-1775-444a-9a94-fbd7db3546fe</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=daf2e66247db81101cf79454836d43df"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>daf2e66247db81101cf79454836d43df</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:59</sys_created_on>
+        <sys_id>daf2e66247db81101cf79454836d43e1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:16</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"false\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"e98df760-e621-4868-9e56-f047cb3a53de\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD29768ae6f95b8110694e6dc6e86a44fc\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7b27bb75-4c7f-462b-b5a9-d31851297dc9\"}"}},"complexObject":{"name$":"FD29768ae6f95b8110694e6dc6e86a44fc","$COCollectionField":[""]},"serializationFormat":"JSON"}</value>
+        <variable display_value="sign_with">2976cae6475b81101cf79454836d4309</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=daf2e66247db81101cf79454836d43df"/>
+    <sys_element_mapping action="DELETE">
+        <field>key</field>
+        <id>daf2e66247db81101cf79454836d43df</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:59</sys_created_on>
+        <sys_id>5af2e66247db81101cf79454836d43e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:59</sys_updated_on>
+        <table>var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9</table>
+        <value>{{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>sign_with</field>
+        <id>daf2e66247db81101cf79454836d43df</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:59</sys_created_on>
+        <sys_id>92f2e66247db81101cf79454836d43e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:59</sys_updated_on>
+        <table>var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=daf2e66247db81101cf79454836d43df"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=daf2e66247db81101cf79454836d43df"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:14</sys_created_on>
+        <sys_id>f9944666475b81101cf79454836d4309</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:16</sys_updated_on>
+        <ui_id>a60d9a34-22aa-4d54-939d-805c1f4e68f6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=f9944666475b81101cf79454836d4309"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f9944666475b81101cf79454836d4309</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:14</sys_created_on>
+        <sys_id>b9944666475b81101cf79454836d430b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:12:36</sys_updated_on>
+        <value>x_snc_htoken_treasury</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=f9944666475b81101cf79454836d4309"/>
+    <sys_element_mapping action="DELETE">
+        <field>record</field>
+        <id>f9944666475b81101cf79454836d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:14</sys_created_on>
+        <sys_id>75944666475b81101cf79454836d430b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:12:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.treasury}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>table_name</field>
+        <id>f9944666475b81101cf79454836d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:14</sys_created_on>
+        <sys_id>b1944666475b81101cf79454836d430b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:11:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>values</field>
+        <id>f9944666475b81101cf79454836d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:11:14</sys_created_on>
+        <sys_id>39944666475b81101cf79454836d430b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:59</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>account_id={{162a9e14-1775-444a-9a94-fbd7db3546fe.account_id}}^key={{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=f9944666475b81101cf79454836d4309"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f9944666475b81101cf79454836d4309"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=59940666475b81101cf79454836d4380"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=59940666475b81101cf79454836d4380"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=59940666475b81101cf79454836d4380"/>
+    <sys_hub_flow_variable action="DELETE" query="model=59940666475b81101cf79454836d4380"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380^sys_idNOT IN25e48a66475b81101cf79454836d4377"/>
+    <sys_documentation action="DELETE">
+        <element>treasury</element>
+        <help/>
+        <hint/>
+        <label>treasury</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:12:35</sys_created_on>
+        <sys_id>25e48a66475b81101cf79454836d4377</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:12:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380^sys_idNOT IN0af2e66247db81101cf79454836d43af,8af2e66247db81101cf79454836d43b2"/>
+    <sys_documentation action="DELETE">
+        <element>key</element>
+        <help/>
+        <hint/>
+        <label>key</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:58</sys_created_on>
+        <sys_id>0af2e66247db81101cf79454836d43af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>account_id</element>
+        <help/>
+        <hint/>
+        <label>account_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:23:58</sys_created_on>
+        <sys_id>8af2e66247db81101cf79454836d43b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:23:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=59940666475b81101cf79454836d4380"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=59940666475b81101cf79454836d4380^sys_idNOT IN5835c2a6475b81101cf79454836d4311"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@76b866</plan>
+        <plan_id display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</plan_id>
+        <snapshot>b225ce66475b81101cf79454836d434b</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5835c2a6475b81101cf79454836d4311</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:16</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>generate_key_and_account_for_treasury</internal_name>
+        <label_cache>[{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.response","label":"2 - create_account➛response","reference_display":"response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"c0df6deb-c1ce-452f-b9a1-633445b8e3b9"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.public_key","label":"1➛key➛Public Key","reference":"","reference_display":"Public Key","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_key","column_name":"public_key"},{"name":"subflow.treasury","label":"Input➛treasury","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d4affa48-e036-46bc-9d57-1ca7c07ae37c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.user","label":"Input➛user","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"9f55c918-a45c-43e0-b1b2-ed7847368840"}},{"name":"subflow.user.x_snc_htoken_account.account_id","label":"Input➛user➛Account➛Account Id","reference":"","reference_display":"Account Id","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_account","column_name":"account_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.public_key","label":"1➛public_key","reference_display":"public_key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"de7a523f-769e-426d-8a49-3a900edda609"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.record","label":"3 - Update Record➛Treasury Record","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.table_name","label":"3 - Update Record➛Treasury Table","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__action_status__","label":"3 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__dont_treat_as_error__","label":"3 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account","label":"2 - create_account➛account","reference":"x_snc_hspoke_account","reference_display":"Account","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7934492a-b5cc-41c6-b700-7d55579e1015"}},{"name":"subflow.user.user_name","label":"Input➛user➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.sys_id","label":"1➛key➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_key","column_name":"sys_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account.sys_id","label":"2 - create_account➛account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_account","column_name":"sys_id"}]</label_cache>
+        <master>true</master>
+        <name>Generate key and account for treasury</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Generate key and account for treasury">59940666475b81101cf79454836d4380</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b225ce66475b81101cf79454836d434b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:14</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=b225ce66475b81101cf79454836d434b"/>
+    <sys_variable_value action="DELETE" query="document_key=b225ce66475b81101cf79454836d434b"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b^id=b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=b225ce66475b81101cf79454836d434b"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=b225ce66475b81101cf79454836d434b^sys_idNOT IN3625ce66475b81101cf79454836d434c"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>b225ce66475b81101cf79454836d434b</id>
+        <name>Generate key and account for treasury</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:46</sys_created_on>
+        <sys_id>3625ce66475b81101cf79454836d434c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:13:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=3625ce66475b81101cf79454836d434c"/>
+    <sys_hub_flow_input action="DELETE" query="model=b225ce66475b81101cf79454836d434b^sys_idNOT INb625ce66475b81101cf79454836d434d"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=d4affa48-e036-46bc-9d57-1ca7c07ae37c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_htoken_treasury</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>treasury</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>treasury</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Generate key and account for treasury">b225ce66475b81101cf79454836d434b</model>
+        <model_id>b225ce66475b81101cf79454836d434b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_htoken_treasury">x_snc_htoken_treasury</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:46</sys_created_on>
+        <sys_id>b625ce66475b81101cf79454836d434d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:13:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=b225ce66475b81101cf79454836d434b^sys_idNOT INed03aa6247db81101cf79454836d434d,ed03aa6247db81101cf79454836d4365"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=690d1e21-4fdb-4c12-8c81-df562013def1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>key</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>key</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Generate key and account for treasury">b225ce66475b81101cf79454836d434b</model>
+        <model_id>b225ce66475b81101cf79454836d434b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:12</sys_created_on>
+        <sys_id>ed03aa6247db81101cf79454836d434d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3f23f16d-942a-4d4e-a159-549266315f2e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>account_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>account_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Generate key and account for treasury">b225ce66475b81101cf79454836d434b</model>
+        <model_id>b225ce66475b81101cf79454836d434b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>ed03aa6247db81101cf79454836d4365</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_action_instance action="DELETE" query="flow=b225ce66475b81101cf79454836d434b^sys_idNOT IN7903aa6247db81101cf79454836d4395,c43582a6475b81101cf79454836d43c9,f903aa6247db81101cf79454836d4382"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="create_account">25768ae6475b81101cf79454836d43f9</action_type>
+        <action_type_parent display_value="create_account">0c667785479301101cf79454836d439e</action_type_parent>
+        <comment/>
+        <compiled_snapshot>25768ae6475b81101cf79454836d43f9</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Generate key and account for treasury">b225ce66475b81101cf79454836d434b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>7903aa6247db81101cf79454836d4395</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:14</sys_updated_on>
+        <ui_id>162a9e14-1775-444a-9a94-fbd7db3546fe</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=7903aa6247db81101cf79454836d4395"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7903aa6247db81101cf79454836d4395</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>b503aa6247db81101cf79454836d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:13</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"false\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"e98df760-e621-4868-9e56-f047cb3a53de\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD29768ae6f95b8110694e6dc6e86a44fc\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7b27bb75-4c7f-462b-b5a9-d31851297dc9\"}"}},"complexObject":{"name$":"FD29768ae6f95b8110694e6dc6e86a44fc","$COCollectionField":[""]},"serializationFormat":"JSON"}</value>
+        <variable display_value="sign_with">2976cae6475b81101cf79454836d4309</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=7903aa6247db81101cf79454836d4395"/>
+    <sys_element_mapping action="DELETE">
+        <field>key</field>
+        <id>7903aa6247db81101cf79454836d4395</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>3503aa6247db81101cf79454836d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9</table>
+        <value>{{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>sign_with</field>
+        <id>7903aa6247db81101cf79454836d4395</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>7103aa6247db81101cf79454836d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=7903aa6247db81101cf79454836d4395"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=7903aa6247db81101cf79454836d4395"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Generate key and account for treasury">b225ce66475b81101cf79454836d434b</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:50</sys_created_on>
+        <sys_id>c43582a6475b81101cf79454836d43c9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:14</sys_updated_on>
+        <ui_id>a60d9a34-22aa-4d54-939d-805c1f4e68f6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=c43582a6475b81101cf79454836d43c9"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c43582a6475b81101cf79454836d43c9</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:50</sys_created_on>
+        <sys_id>003582a6475b81101cf79454836d43cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:13:50</sys_updated_on>
+        <value>x_snc_htoken_treasury</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=c43582a6475b81101cf79454836d43c9"/>
+    <sys_element_mapping action="DELETE">
+        <field>record</field>
+        <id>c43582a6475b81101cf79454836d43c9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:50</sys_created_on>
+        <sys_id>c83582a6475b81101cf79454836d43ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:13:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.treasury}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>table_name</field>
+        <id>c43582a6475b81101cf79454836d43c9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:50</sys_created_on>
+        <sys_id>083582a6475b81101cf79454836d43ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:13:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>values</field>
+        <id>c43582a6475b81101cf79454836d43c9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:50</sys_created_on>
+        <sys_id>8c3582a6475b81101cf79454836d43ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>account_id={{162a9e14-1775-444a-9a94-fbd7db3546fe.account_id}}^key={{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=c43582a6475b81101cf79454836d43c9"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=c43582a6475b81101cf79454836d43c9"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_type display_value="generate_key">5705df7c47df05101cf79454836d43d2</action_type>
+        <action_type_parent display_value="generate_key">cbe45f7c47df05101cf79454836d4357</action_type_parent>
+        <comment/>
+        <compiled_snapshot>5705df7c47df05101cf79454836d43d2</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Generate key and account for treasury">b225ce66475b81101cf79454836d434b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>f903aa6247db81101cf79454836d4382</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:14</sys_updated_on>
+        <ui_id>bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=f903aa6247db81101cf79454836d4382"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=f903aa6247db81101cf79454836d4382"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f903aa6247db81101cf79454836d4382"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_flow_variable action="DELETE" query="model=b225ce66475b81101cf79454836d434b"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b^sys_idNOT INff2582a6475b81101cf79454836d4384"/>
+    <sys_documentation action="DELETE">
+        <element>treasury</element>
+        <help/>
+        <hint/>
+        <label>treasury</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 13:13:49</sys_created_on>
+        <sys_id>ff2582a6475b81101cf79454836d4384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 13:13:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b^sys_idNOT INa103aa6247db81101cf79454836d4356,e503aa6247db81101cf79454836d436a"/>
+    <sys_documentation action="DELETE">
+        <element>key</element>
+        <help/>
+        <hint/>
+        <label>key</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:12</sys_created_on>
+        <sys_id>a103aa6247db81101cf79454836d4356</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>account_id</element>
+        <help/>
+        <hint/>
+        <label>account_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:13</sys_created_on>
+        <sys_id>e503aa6247db81101cf79454836d436a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>59940666475b81101cf79454836d4380</sys_id>
+        <latest_snapshot>b225ce66475b81101cf79454836d434b</latest_snapshot>
+    </sys_hub_flow>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>sys_hub_flow_59940666475b81101cf79454836d4380</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build&gt;glide-sandiego-12-22-2021__patch3-04-27-2022_05-06-2022_1135.zip&lt;/compiler_build&gt;&lt;copied_from&gt;78a4d77c47df05101cf79454836d43fc&lt;/copied_from&gt;&lt;copied_from_name&gt;Generate key and account&lt;/copied_from_name&gt;&lt;description/&gt;&lt;internal_name&gt;generate_key_and_account_for_treasury&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.response","label":"2 - create_account➛response","reference_display":"response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"c0df6deb-c1ce-452f-b9a1-633445b8e3b9"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.public_key","label":"1➛key➛Public Key","reference":"","reference_display":"Public Key","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_key","column_name":"public_key"},{"name":"subflow.treasury","label":"Input➛treasury","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d4affa48-e036-46bc-9d57-1ca7c07ae37c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.user","label":"Input➛user","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"9f55c918-a45c-43e0-b1b2-ed7847368840"}},{"name":"subflow.user.x_snc_htoken_account.account_id","label":"Input➛user➛Account➛Account Id","reference":"","reference_display":"Account Id","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_account","column_name":"account_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.public_key","label":"1➛public_key","reference_display":"public_key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"de7a523f-769e-426d-8a49-3a900edda609"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.record","label":"3 - Update Record➛Treasury Record","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.table_name","label":"3 - Update Record➛Treasury Table","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__action_status__","label":"3 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__dont_treat_as_error__","label":"3 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account","label":"2 - create_account➛account","reference":"x_snc_hspoke_account","reference_display":"Account","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7934492a-b5cc-41c6-b700-7d55579e1015"}},{"name":"subflow.user.user_name","label":"Input➛user➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.sys_id","label":"1➛key➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_key","column_name":"sys_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account.sys_id","label":"2 - create_account➛account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_account","column_name":"sys_id"}]&lt;/label_cache&gt;&lt;master_snapshot&gt;b225ce66475b81101cf79454836d434b&lt;/master_snapshot&gt;&lt;name&gt;Generate key and account for treasury&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:12&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;59940666475b81101cf79454836d4380&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Generate key and account for treasury&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_59940666475b81101cf79454836d4380&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:16&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=59940666475b81101cf79454836d4380"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=59940666475b81101cf79454836d4380"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380^id=59940666475b81101cf79454836d4380"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=59940666475b81101cf79454836d4380"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=59940666475b81101cf79454836d4380"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=59940666475b81101cf79454836d4380^sys_idNOT IN59940666475b81101cf79454836d4381"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;59940666475b81101cf79454836d4380&lt;/id&gt;&lt;name&gt;Generate key and account for treasury&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:12&lt;/sys_created_on&gt;&lt;sys_id&gt;59940666475b81101cf79454836d4381&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:11:12&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=59940666475b81101cf79454836d4381"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=59940666475b81101cf79454836d4380^sys_idNOT INa1e48a66475b81101cf79454836d4372"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=d4affa48-e036-46bc-9d57-1ca7c07ae37c&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;x_snc_htoken_treasury&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;treasury&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;treasury&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/model&gt;&lt;model_id&gt;59940666475b81101cf79454836d4380&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="x_snc_htoken_treasury"&gt;x_snc_htoken_treasury&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:12:35&lt;/sys_created_on&gt;&lt;sys_id&gt;a1e48a66475b81101cf79454836d4372&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:12:35&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=59940666475b81101cf79454836d4380^sys_idNOT IN06f2e66247db81101cf79454836d43aa,06f2e66247db81101cf79454836d43b0"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=690d1e21-4fdb-4c12-8c81-df562013def1&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;key&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;key&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/model&gt;&lt;model_id&gt;59940666475b81101cf79454836d4380&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:58&lt;/sys_created_on&gt;&lt;sys_id&gt;06f2e66247db81101cf79454836d43aa&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3f23f16d-942a-4d4e-a159-549266315f2e&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;account_id&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;account_id&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/model&gt;&lt;model_id&gt;59940666475b81101cf79454836d4380&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:58&lt;/sys_created_on&gt;&lt;sys_id&gt;06f2e66247db81101cf79454836d43b0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=59940666475b81101cf79454836d4380"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=59940666475b81101cf79454836d4380^sys_idNOT IN42f2e66247db81101cf79454836d43d0,daf2e66247db81101cf79454836d43df,f9944666475b81101cf79454836d4309"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_type display_value="generate_key"&gt;5705df7c47df05101cf79454836d43d2&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:58&lt;/sys_created_on&gt;&lt;sys_id&gt;42f2e66247db81101cf79454836d43d0&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:16&lt;/sys_updated_on&gt;&lt;ui_id&gt;bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=42f2e66247db81101cf79454836d43d0"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=42f2e66247db81101cf79454836d43d0"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=42f2e66247db81101cf79454836d43d0"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="create_account"&gt;25768ae6475b81101cf79454836d43f9&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:59&lt;/sys_created_on&gt;&lt;sys_id&gt;daf2e66247db81101cf79454836d43df&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:16&lt;/sys_updated_on&gt;&lt;ui_id&gt;162a9e14-1775-444a-9a94-fbd7db3546fe&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=daf2e66247db81101cf79454836d43df"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;daf2e66247db81101cf79454836d43df&lt;/document_key&gt;&lt;order&gt;3&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:59&lt;/sys_created_on&gt;&lt;sys_id&gt;daf2e66247db81101cf79454836d43e1&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:16&lt;/sys_updated_on&gt;&lt;value&gt;{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"false\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"e98df760-e621-4868-9e56-f047cb3a53de\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD29768ae6f95b8110694e6dc6e86a44fc\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7b27bb75-4c7f-462b-b5a9-d31851297dc9\"}"}},"complexObject":{"name$":"FD29768ae6f95b8110694e6dc6e86a44fc","$COCollectionField":[""]},"serializationFormat":"JSON"}&lt;/value&gt;&lt;variable display_value="sign_with"&gt;2976cae6475b81101cf79454836d4309&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=daf2e66247db81101cf79454836d43df"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;key&lt;/field&gt;&lt;id&gt;daf2e66247db81101cf79454836d43df&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:59&lt;/sys_created_on&gt;&lt;sys_id&gt;5af2e66247db81101cf79454836d43e1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9&lt;/table&gt;&lt;value&gt;{{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;sign_with&lt;/field&gt;&lt;id&gt;daf2e66247db81101cf79454836d43df&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:59&lt;/sys_created_on&gt;&lt;sys_id&gt;92f2e66247db81101cf79454836d43e1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=daf2e66247db81101cf79454836d43df"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=daf2e66247db81101cf79454836d43df"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/flow&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:14&lt;/sys_created_on&gt;&lt;sys_id&gt;f9944666475b81101cf79454836d4309&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:16&lt;/sys_updated_on&gt;&lt;ui_id&gt;a60d9a34-22aa-4d54-939d-805c1f4e68f6&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=f9944666475b81101cf79454836d4309"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;f9944666475b81101cf79454836d4309&lt;/document_key&gt;&lt;order&gt;50&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:14&lt;/sys_created_on&gt;&lt;sys_id&gt;b9944666475b81101cf79454836d430b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:12:36&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_htoken_treasury&lt;/value&gt;&lt;variable display_value="Table"&gt;b5d01916c31332002841b63b12d3aec9&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=f9944666475b81101cf79454836d4309"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;record&lt;/field&gt;&lt;id&gt;f9944666475b81101cf79454836d4309&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:14&lt;/sys_created_on&gt;&lt;sys_id&gt;75944666475b81101cf79454836d430b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:12:36&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value&gt;{{subflow.treasury}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;table_name&lt;/field&gt;&lt;id&gt;f9944666475b81101cf79454836d4309&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:14&lt;/sys_created_on&gt;&lt;sys_id&gt;b1944666475b81101cf79454836d430b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:11:14&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;values&lt;/field&gt;&lt;id&gt;f9944666475b81101cf79454836d4309&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:11:14&lt;/sys_created_on&gt;&lt;sys_id&gt;39944666475b81101cf79454836d430b&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value&gt;account_id={{162a9e14-1775-444a-9a94-fbd7db3546fe.account_id}}^key={{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=f9944666475b81101cf79454836d4309"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=f9944666475b81101cf79454836d4309"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=59940666475b81101cf79454836d4380"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=59940666475b81101cf79454836d4380"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=59940666475b81101cf79454836d4380"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=59940666475b81101cf79454836d4380"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380^sys_idNOT IN25e48a66475b81101cf79454836d4377"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;treasury&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;treasury&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:12:35&lt;/sys_created_on&gt;&lt;sys_id&gt;25e48a66475b81101cf79454836d4377&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:12:35&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_59940666475b81101cf79454836d4380"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380^sys_idNOT IN0af2e66247db81101cf79454836d43af,8af2e66247db81101cf79454836d43b2"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;key&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;key&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:58&lt;/sys_created_on&gt;&lt;sys_id&gt;0af2e66247db81101cf79454836d43af&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;account_id&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;account_id&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:23:58&lt;/sys_created_on&gt;&lt;sys_id&gt;8af2e66247db81101cf79454836d43b2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:23:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_59940666475b81101cf79454836d4380"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=59940666475b81101cf79454836d4380"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=59940666475b81101cf79454836d4380^sys_idNOT IN5835c2a6475b81101cf79454836d4311"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@76b866&lt;/plan&gt;&lt;plan_id display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/plan_id&gt;&lt;snapshot&gt;b225ce66475b81101cf79454836d434b&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:51&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5835c2a6475b81101cf79454836d4311&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:16&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;internal_name&gt;generate_key_and_account_for_treasury&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.response","label":"2 - create_account➛response","reference_display":"response","type":"json","base_type":"json","attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"c0df6deb-c1ce-452f-b9a1-633445b8e3b9"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"162a9e14-1775-444a-9a94-fbd7db3546fe.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.public_key","label":"1➛key➛Public Key","reference":"","reference_display":"Public Key","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_key","column_name":"public_key"},{"name":"subflow.treasury","label":"Input➛treasury","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d4affa48-e036-46bc-9d57-1ca7c07ae37c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.user","label":"Input➛user","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"9f55c918-a45c-43e0-b1b2-ed7847368840"}},{"name":"subflow.user.x_snc_htoken_account.account_id","label":"Input➛user➛Account➛Account Id","reference":"","reference_display":"Account Id","type":"string","base_type":"string","parent_table_name":"x_snc_hspoke_account","column_name":"account_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.consensus_timestamp","label":"2 - create_account➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5c9f3755-d6d4-415b-9db9-730377cde9ef"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account_id","label":"2 - create_account➛account_id","reference_display":"account_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8b679d46-b5be-4e3a-92f8-801db4a630c7"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.hstatus","label":"2 - create_account➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"706e2c15-e53d-4ba9-b576-ee8549218f48"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.fail","label":"2 - create_account➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"139d7426-6be7-4a72-9ca1-50d48b456b28"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__dont_treat_as_error__","label":"2 - create_account➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f31105ea-f97f-4180-b4ac-b9aaa9d06590"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.__action_status__","label":"2 - create_account➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"a215efc2-4013-42ca-be40-457067b298e0"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.public_key","label":"1➛public_key","reference_display":"public_key","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"de7a523f-769e-426d-8a49-3a900edda609"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__dont_treat_as_error__","label":"1 - generate_key➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b1b94fd-21f3-4df2-bd62-62e678c48972"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.__action_status__","label":"1 - generate_key➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"08993584-e0dc-4589-bb27-24567f10db9f"}},{"name":"90934517-602c-4a64-b00d-7785c216d080.key","label":"1 - generate_key➛key","reference_display":"key","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ec41e769-cde2-4002-873b-026f7a0cc5b8"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.record","label":"3 - Update Record➛Treasury Record","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.table_name","label":"3 - Update Record➛Treasury Table","reference":"x_snc_htoken_treasury","reference_display":"Treasury","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__action_status__","label":"3 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a60d9a34-22aa-4d54-939d-805c1f4e68f6.__dont_treat_as_error__","label":"3 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account","label":"2 - create_account➛account","reference":"x_snc_hspoke_account","reference_display":"Account","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7934492a-b5cc-41c6-b700-7d55579e1015"}},{"name":"subflow.user.user_name","label":"Input➛user➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"90934517-602c-4a64-b00d-7785c216d080.key.sys_id","label":"1➛key➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_key","column_name":"sys_id"},{"name":"a5d850c2-0fbc-45a9-a874-d1412c738ccc.account.sys_id","label":"2 - create_account➛account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_hspoke_account","column_name":"sys_id"}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Generate key and account for treasury&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Generate key and account for treasury"&gt;59940666475b81101cf79454836d4380&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:46&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b225ce66475b81101cf79454836d434b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:14&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b^id=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=b225ce66475b81101cf79454836d434b^sys_idNOT IN3625ce66475b81101cf79454836d434c"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;b225ce66475b81101cf79454836d434b&lt;/id&gt;&lt;name&gt;Generate key and account for treasury&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:46&lt;/sys_created_on&gt;&lt;sys_id&gt;3625ce66475b81101cf79454836d434c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:13:46&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3625ce66475b81101cf79454836d434c"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=b225ce66475b81101cf79454836d434b^sys_idNOT INb625ce66475b81101cf79454836d434d"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=d4affa48-e036-46bc-9d57-1ca7c07ae37c&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;x_snc_htoken_treasury&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;treasury&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;treasury&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Generate key and account for treasury"&gt;b225ce66475b81101cf79454836d434b&lt;/model&gt;&lt;model_id&gt;b225ce66475b81101cf79454836d434b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="x_snc_htoken_treasury"&gt;x_snc_htoken_treasury&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:46&lt;/sys_created_on&gt;&lt;sys_id&gt;b625ce66475b81101cf79454836d434d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:13:49&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=b225ce66475b81101cf79454836d434b^sys_idNOT INed03aa6247db81101cf79454836d434d,ed03aa6247db81101cf79454836d4365"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=690d1e21-4fdb-4c12-8c81-df562013def1&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;key&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;key&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Generate key and account for treasury"&gt;b225ce66475b81101cf79454836d434b&lt;/model&gt;&lt;model_id&gt;b225ce66475b81101cf79454836d434b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:12&lt;/sys_created_on&gt;&lt;sys_id&gt;ed03aa6247db81101cf79454836d434d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:12&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3f23f16d-942a-4d4e-a159-549266315f2e&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;account_id&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;account_id&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Generate key and account for treasury"&gt;b225ce66475b81101cf79454836d434b&lt;/model&gt;&lt;model_id&gt;b225ce66475b81101cf79454836d434b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;ed03aa6247db81101cf79454836d4365&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:13&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=b225ce66475b81101cf79454836d434b^sys_idNOT IN7903aa6247db81101cf79454836d4395,c43582a6475b81101cf79454836d43c9,f903aa6247db81101cf79454836d4382"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="create_account"&gt;25768ae6475b81101cf79454836d43f9&lt;/action_type&gt;&lt;action_type_parent display_value="create_account"&gt;0c667785479301101cf79454836d439e&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;25768ae6475b81101cf79454836d43f9&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Generate key and account for treasury"&gt;b225ce66475b81101cf79454836d434b&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;7903aa6247db81101cf79454836d4395&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:14&lt;/sys_updated_on&gt;&lt;ui_id&gt;162a9e14-1775-444a-9a94-fbd7db3546fe&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=7903aa6247db81101cf79454836d4395"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;7903aa6247db81101cf79454836d4395&lt;/document_key&gt;&lt;order&gt;3&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;b503aa6247db81101cf79454836d43bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:13&lt;/sys_updated_on&gt;&lt;value&gt;{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD29768ae6f95b8110694e6dc6e86a44fc.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"false\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"e98df760-e621-4868-9e56-f047cb3a53de\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD29768ae6f95b8110694e6dc6e86a44fc\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7b27bb75-4c7f-462b-b5a9-d31851297dc9\"}"}},"complexObject":{"name$":"FD29768ae6f95b8110694e6dc6e86a44fc","$COCollectionField":[""]},"serializationFormat":"JSON"}&lt;/value&gt;&lt;variable display_value="sign_with"&gt;2976cae6475b81101cf79454836d4309&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=7903aa6247db81101cf79454836d4395"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;key&lt;/field&gt;&lt;id&gt;7903aa6247db81101cf79454836d4395&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;3503aa6247db81101cf79454836d43bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:13&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9&lt;/table&gt;&lt;value&gt;{{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;sign_with&lt;/field&gt;&lt;id&gt;7903aa6247db81101cf79454836d4395&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;7103aa6247db81101cf79454836d43bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:13&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_25768ae6475b81101cf79454836d43f9&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=7903aa6247db81101cf79454836d4395"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=7903aa6247db81101cf79454836d4395"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Generate key and account for treasury"&gt;b225ce66475b81101cf79454836d434b&lt;/flow&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:50&lt;/sys_created_on&gt;&lt;sys_id&gt;c43582a6475b81101cf79454836d43c9&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:14&lt;/sys_updated_on&gt;&lt;ui_id&gt;a60d9a34-22aa-4d54-939d-805c1f4e68f6&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=c43582a6475b81101cf79454836d43c9"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;c43582a6475b81101cf79454836d43c9&lt;/document_key&gt;&lt;order&gt;50&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:50&lt;/sys_created_on&gt;&lt;sys_id&gt;003582a6475b81101cf79454836d43cb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:13:50&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_htoken_treasury&lt;/value&gt;&lt;variable display_value="Table"&gt;b5d01916c31332002841b63b12d3aec9&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=c43582a6475b81101cf79454836d43c9"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;record&lt;/field&gt;&lt;id&gt;c43582a6475b81101cf79454836d43c9&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:50&lt;/sys_created_on&gt;&lt;sys_id&gt;c83582a6475b81101cf79454836d43ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:13:50&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value&gt;{{subflow.treasury}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;table_name&lt;/field&gt;&lt;id&gt;c43582a6475b81101cf79454836d43c9&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:50&lt;/sys_created_on&gt;&lt;sys_id&gt;083582a6475b81101cf79454836d43ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:13:50&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;values&lt;/field&gt;&lt;id&gt;c43582a6475b81101cf79454836d43c9&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:50&lt;/sys_created_on&gt;&lt;sys_id&gt;8c3582a6475b81101cf79454836d43ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:13&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value&gt;account_id={{162a9e14-1775-444a-9a94-fbd7db3546fe.account_id}}^key={{bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0.key}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=c43582a6475b81101cf79454836d43c9"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=c43582a6475b81101cf79454836d43c9"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_type display_value="generate_key"&gt;5705df7c47df05101cf79454836d43d2&lt;/action_type&gt;&lt;action_type_parent display_value="generate_key"&gt;cbe45f7c47df05101cf79454836d4357&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;5705df7c47df05101cf79454836d43d2&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Generate key and account for treasury"&gt;b225ce66475b81101cf79454836d434b&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;f903aa6247db81101cf79454836d4382&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:14&lt;/sys_updated_on&gt;&lt;ui_id&gt;bf5b98b5-3de2-4ae3-83cc-464f5e53f3b0&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=f903aa6247db81101cf79454836d4382"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=f903aa6247db81101cf79454836d4382"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=f903aa6247db81101cf79454836d4382"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b^sys_idNOT INff2582a6475b81101cf79454836d4384"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;treasury&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;treasury&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 13:13:49&lt;/sys_created_on&gt;&lt;sys_id&gt;ff2582a6475b81101cf79454836d4384&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 13:13:49&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b^sys_idNOT INa103aa6247db81101cf79454836d4356,e503aa6247db81101cf79454836d436a"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;key&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;key&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:12&lt;/sys_created_on&gt;&lt;sys_id&gt;a103aa6247db81101cf79454836d4356&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:12&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;account_id&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;account_id&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-09 15:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;e503aa6247db81101cf79454836d436a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-09 15:24:13&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b225ce66475b81101cf79454836d434b"/&gt;&lt;sys_hub_flow action="update"&gt;&lt;sys_id&gt;59940666475b81101cf79454836d4380&lt;/sys_id&gt;&lt;latest_snapshot&gt;b225ce66475b81101cf79454836d434b&lt;/latest_snapshot&gt;&lt;/sys_hub_flow&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1863482522</payload_hash>
+        <record_name>Generate key and account for treasury</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 15:24:17</sys_created_on>
+        <sys_id>e203ea6247db81101cf79454836d436f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>180a96bd15f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 15:24:17</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>2e03ea623bdb8110461fc475ed1c006e</update_guid>
+        <update_guid_history>2e03ea623bdb8110461fc475ed1c006e:-1863482522,89036a6216db81103cacbd712ef63dce:-2022007972,eef22a62cfdb8110074cf3285827e0b4:-471317040,1435c2a6125b8110f29696972703f747:-878941079,7625ce660b5b8110f7a158a7d5f5bc23:-1663355537,39e48a66345b8110f189e3be61c3b2a1:118697330,0a944666a15b8110a74383e9cb284a25:-1724816419,19940666535b81108f16bed3f90ba987:-631396620</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-17 11:42:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>bd6970a061cd422e9d8044f02da7d7c4</sys_id>
+        <sys_metadata>59940666475b81101cf79454836d4380</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Generate key and account for treasury</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_59940666475b81101cf79454836d4380</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_59940666475b81101cf79454836d4380">e203ea6247db81101cf79454836d436f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-17 11:42:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

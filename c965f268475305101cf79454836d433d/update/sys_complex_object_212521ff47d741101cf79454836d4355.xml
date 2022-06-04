@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD6d2521ff4ad74110ff7d3814a91ca354</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>c965f268475305101cf79454836d433d</scope_name>
+        <serialized_content>{"FlowDesigner:FD6d2521ff4ad74110ff7d3814a91ca354":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD6d2521ff4ad74110ff7d3814a91ca354.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"075a3fc5-c444-4e3c-9d93-716eaf0289f6\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD6d2521ff4ad74110ff7d3814a91ca354\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-13 08:06:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>212521ff47d741101cf79454836d4355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD6d2521ff4ad74110ff7d3814a91ca354</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_complex_object_212521ff47d741101cf79454836d4355</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-13 08:06:17</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

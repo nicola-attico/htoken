@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Balance" max_length="40" name="x_snc_htoken_st_balance" sizeclass="0" type="collection">
+        <element label="Account" max_length="32" name="account" reference="x_snc_htoken_account" type="reference"/>
+        <element label="Balance" max_length="100" name="balance" type="string"/>
+        <element label="Token" max_length="32" name="token" reference="x_snc_htoken_token" type="reference"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+        <index name="index2">
+            <element name="account"/>
+        </index>
+        <index name="index3">
+            <element name="token"/>
+        </index>
+    </element>
+</database>

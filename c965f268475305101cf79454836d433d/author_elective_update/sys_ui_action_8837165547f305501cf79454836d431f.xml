@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>DLT Sync</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[	try {
+		var inputs = {};
+ 
+		inputs['token_id'] = current.token_id; // String 
+				
+		var result = sn_fd.FlowAPI.getRunner().action('x_snc_hspoke.query_token').inForeground().withInputs(inputs).run();
+		var outputs = result.getOutputs();
+
+		var response = outputs['response']; // String
+		
+		var r = JSON.parse(response)
+		
+		current.treasury_account_id = r.treasury_account_id
+		current.admin_key_suffix = (r.admin_key ? r.admin_key.key : null)
+		current.freeze_key_suffix = (r.freeze_key ? r.freeze_key.key : null)
+		current.pause_key_suffix = (r.pause_key ? r.pause_key.key : null)
+		current.kyc_key_suffix = (r.kyc_key ? r.kyc_key.key : null)
+		current.supply_key_suffix = (r.supply_key ? r.supply_key.key : null)
+		current.wipe_key_suffix = (r.wipe_key ? r.wipe_key.key : null)
+		current.auto_renew_account = r.auto_renew_account
+		current.symbol = r.symbol
+		current.name = r.name
+		current.type = r.type
+		current.auto_renew_period = r.auto_renew_period
+		current.created_timestamp = r.created_timestamp
+		current.decimals = r.decimals
+		current.deleted = r.deleted
+		current.expiry_timestamp = r.expiry_timestamp
+		current.freeze_default = r.freeze_default
+		current.initial_supply = r.initial_supply
+		current.max_supply = r.max_supply
+		current.memo = r.memo
+		current.modified_timestamp = r.modified_timestamp
+		current.pause_status = r.pause_status
+		current.supply_type = r.supply_type
+		current.total_supply = r.total_supply
+		current.update()
+		action.setRedirectURL(current)
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-30 13:55:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8837165547f305501cf79454836d431f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>DLT Sync</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_ui_action_8837165547f305501cf79454836d431f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-30 16:26:16</sys_updated_on>
+        <table>x_snc_htoken_token</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>sys_ui_action_8837165547f305501cf79454836d431f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;DLT Sync&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[	try {
+		var inputs = {};
+ 
+		inputs['token_id'] = current.token_id; // String 
+				
+		var result = sn_fd.FlowAPI.getRunner().action('x_snc_hspoke.query_token').inForeground().withInputs(inputs).run();
+		var outputs = result.getOutputs();
+
+		var response = outputs['response']; // String
+		
+		var r = JSON.parse(response)
+		
+		current.treasury_account_id = r.treasury_account_id
+		current.admin_key_suffix = (r.admin_key ? r.admin_key.key : null)
+		current.freeze_key_suffix = (r.freeze_key ? r.freeze_key.key : null)
+		current.pause_key_suffix = (r.pause_key ? r.pause_key.key : null)
+		current.kyc_key_suffix = (r.kyc_key ? r.kyc_key.key : null)
+		current.supply_key_suffix = (r.supply_key ? r.supply_key.key : null)
+		current.wipe_key_suffix = (r.wipe_key ? r.wipe_key.key : null)
+		current.auto_renew_account = r.auto_renew_account
+		current.symbol = r.symbol
+		current.name = r.name
+		current.type = r.type
+		current.auto_renew_period = r.auto_renew_period
+		current.created_timestamp = r.created_timestamp
+		current.decimals = r.decimals
+		current.deleted = r.deleted
+		current.expiry_timestamp = r.expiry_timestamp
+		current.freeze_default = r.freeze_default
+		current.initial_supply = r.initial_supply
+		current.max_supply = r.max_supply
+		current.memo = r.memo
+		current.modified_timestamp = r.modified_timestamp
+		current.pause_status = r.pause_status
+		current.supply_type = r.supply_type
+		current.total_supply = r.total_supply
+		current.update()
+		action.setRedirectURL(current)
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-05-30 13:55:42&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8837165547f305501cf79454836d431f&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;DLT Sync&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="htoken" source="x_snc_htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="htoken"&gt;c965f268475305101cf79454836d433d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_8837165547f305501cf79454836d431f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-05-30 16:26:16&lt;/sys_updated_on&gt;&lt;table&gt;x_snc_htoken_token&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1608866913</payload_hash>
+        <record_name>DLT Sync</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-30 16:26:16</sys_created_on>
+        <sys_id>979aba15477705501cf79454836d43ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18115ca1cf50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-30 16:26:16</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>df9aba15587705509efe5d5fed76b8ed</update_guid>
+        <update_guid_history>df9aba15587705509efe5d5fed76b8ed:-1608866913,a899b6157677055046cae2ba93395173:-2027349729,8939b215007705506ebc4c74c7475d42:1161568688,c9f8bed158770550d634b3345df848f4:17282064,a7187e51647705506db8aae474cc00de:1023634711,7d285e55ecf30550367f1a74edffb513:1623973833</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-31 07:24:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>b370174501aa4cd496fa697d94099699</sys_id>
+        <sys_metadata>8837165547f305501cf79454836d431f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DLT Sync</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent display_value="Token">dc683d6a471b81101cf79454836d4347</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>sys_ui_action_8837165547f305501cf79454836d431f</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_8837165547f305501cf79454836d431f">979aba15477705501cf79454836d43ee</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-31 07:24:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="0bc54a25473345501cf79454836d4371" sys_domain="global" table="x_snc_htoken_token" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-31 07:14:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1bc54a25473345501cf79454836d4372</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_htoken_token" name="x_snc_htoken_token" sys_domain="global" view="Default view">0bc54a25473345501cf79454836d4371</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_htoken_token" sys_domain="global" view="Default view">10810e09472f45101cf79454836d43aa</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-31 07:14:00</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-31 07:14:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d7c54a25473345501cf79454836d4374</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_htoken_token" name="x_snc_htoken_token" sys_domain="global" view="Default view">0bc54a25473345501cf79454836d4371</sys_ui_form>
+            <sys_ui_section caption="DLT" display_value="DLT" name="x_snc_htoken_token" sys_domain="global" view="Default view">53c54a25473345501cf79454836d4373</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-31 07:14:00</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_htoken_token</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-31 07:14:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0bc54a25473345501cf79454836d4371</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_htoken_token</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+            <sys_update_name>sys_ui_form_sections_0bc54a25473345501cf79454836d4371</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-31 07:14:00</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

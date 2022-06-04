@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Token" max_length="40" name="x_snc_htoken_st_token" sizeclass="0" type="collection">
+        <element label="Admin Key Suffix" max_length="100" name="admin_key_suffix" type="string"/>
+        <element label="Auto Renew Account" max_length="20" name="auto_renew_account" type="string"/>
+        <element label="Auto Renew Period" max_length="50" name="auto_renew_period" type="string"/>
+        <element label="Created Timestamp" max_length="50" name="created_timestamp" type="string"/>
+        <element label="Decimals" max_length="50" name="decimals" type="string"/>
+        <element label="Deleted" max_length="40" name="deleted" type="boolean"/>
+        <element label="Expiry Timestamp" max_length="50" name="expiry_timestamp" type="string"/>
+        <element label="Freeze Default" max_length="40" name="freeze_default" type="boolean"/>
+        <element label="Freeze Key Suffix" max_length="100" name="freeze_key_suffix" type="string"/>
+        <element label="Initial Supply" max_length="100" name="initial_supply" type="string"/>
+        <element label="Kyc Key Suffix" max_length="100" name="kyc_key_suffix" type="string"/>
+        <element label="Max Supply" max_length="100" name="max_supply" type="string"/>
+        <element label="Memo" max_length="1000" name="memo" type="string_full_utf8"/>
+        <element label="Modified Timestamp" max_length="50" name="modified_timestamp" type="string"/>
+        <element label="Name" max_length="50" name="name" type="string_full_utf8"/>
+        <element label="Pause Key Suffix" max_length="100" name="pause_key_suffix" type="string"/>
+        <element choice="1" label="Pause Status" max_length="40" name="pause_status" type="choice">
+            <choice/>
+        </element>
+        <element label="Supply Key Suffix" max_length="100" name="supply_key_suffix" type="string"/>
+        <element choice="1" label="Supply Type" max_length="40" name="supply_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Symbol" max_length="20" name="symbol" type="string_full_utf8"/>
+        <element label="Token Id" max_length="20" name="token_id" type="string"/>
+        <element label="Total Supply" max_length="100" name="total_supply" type="string"/>
+        <element label="Treasury Account Id" max_length="20" name="treasury_account_id" type="string"/>
+        <element label="Wipe Key Suffix" max_length="100" name="wipe_key_suffix" type="string"/>
+    </element>
+</database>

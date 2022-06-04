@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="max_supply" label="Max Supply" language="en" table="x_snc_htoken_st_token">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>max_supply</element>
+            <help/>
+            <hint/>
+            <label>Max Supply</label>
+            <language>en</language>
+            <name>x_snc_htoken_st_token</name>
+            <plural>Max Supplies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-30 17:52:30</sys_created_on>
+            <sys_id>5e5e8b5947b705501cf79454836d431a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Max Supply</sys_name>
+            <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_htoken_st_token_max_supply_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-30 17:52:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

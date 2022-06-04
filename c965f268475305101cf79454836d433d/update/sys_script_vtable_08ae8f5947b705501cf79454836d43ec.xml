@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>Token</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+
+    if (v_query.getSysId()) {
+        load1(v_query.getSysId())
+    } else {
+        gr = new GlideRecord('x_snc_htoken_token')
+        gr.query()
+        while (gr.next()) {
+            load1(gr.token_id)
+        }
+    }
+
+    function load1(token_id) {
+
+        try {
+            var inputs = {};
+
+            inputs['token_id'] = token_id; // String 
+
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_hspoke.query_token').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            var response = outputs['response']; // String
+
+            var r = JSON.parse(response)
+
+            var row = {}
+
+            row.token_id = token_id
+            row.sys_id = token_id
+            row.treasury_account_id = r.treasury_account_id
+            row.admin_key_suffix = (r.admin_key ? r.admin_key.key : null)
+            row.freeze_key_suffix = (r.freeze_key ? r.freeze_key.key : null)
+            row.pause_key_suffix = (r.pause_key ? r.pause_key.key : null)
+            row.kyc_key_suffix = (r.kyc_key ? r.kyc_key.key : null)
+            row.supply_key_suffix = (r.supply_key ? r.supply_key.key : null)
+            row.wipe_key_suffix = (r.wipe_key ? r.wipe_key.key : null)
+            row.auto_renew_account = r.auto_renew_account
+            row.symbol = r.symbol
+            row.name = r.name
+            row.type = r.type
+            row.auto_renew_period = r.auto_renew_period
+            row.created_timestamp = r.created_timestamp
+            row.decimals = r.decimals
+            row.deleted = r.deleted
+            row.expiry_timestamp = r.expiry_timestamp
+            row.freeze_default = r.freeze_default
+            row.initial_supply = r.initial_supply
+            row.max_supply = r.max_supply
+            row.memo = r.memo
+            row.modified_timestamp = r.modified_timestamp
+            row.pause_status = r.pause_status
+            row.supply_type = r.supply_type
+            row.total_supply = r.total_supply
+
+            v_table.addRow(row)
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+
+    }
+
+
+
+})(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-30 17:54:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>08ae8f5947b705501cf79454836d43ec</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>Token</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_script_vtable_08ae8f5947b705501cf79454836d43ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-31 07:53:26</sys_updated_on>
+        <table>x_snc_htoken_st_token</table>
+    </sys_script_vtable>
+</record_update>

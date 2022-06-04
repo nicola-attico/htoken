@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="tx" max_length="40" name="x_snc_htoken_tx" sizeclass="2" type="collection">
+        <element label="Consensus Timestamp" max_length="50" name="consensus_timestamp" type="string"/>
+        <element label="Fail" max_length="40" name="fail" type="boolean"/>
+        <element choice="1" label="hstatus" max_length="40" name="hstatus" type="choice">
+            <choice/>
+        </element>
+        <element label="Transaction Id" max_length="100" name="transaction_id" type="string"/>
+    </element>
+</database>

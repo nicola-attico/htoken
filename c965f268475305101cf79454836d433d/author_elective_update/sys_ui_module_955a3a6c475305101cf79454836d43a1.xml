@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Token Management">915a3a6c475305101cf79454836d439f</application>
+        <filter/>
+        <name>User Accounts</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_snc_htoken.user_account_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-03 11:58:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>955a3a6c475305101cf79454836d43a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Accounts</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_ui_module_955a3a6c475305101cf79454836d43a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-03 11:58:11</sys_updated_on>
+        <table>x_snc_htoken_user_account</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>sys_ui_module_955a3a6c475305101cf79454836d43a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Token Management">915a3a6c475305101cf79454836d439f</application><filter/><name>User Accounts</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_snc_htoken.user_account_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-05-03 11:58:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>955a3a6c475305101cf79454836d43a1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>User Accounts</sys_name><sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package><sys_policy/><sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope><sys_update_name>sys_ui_module_955a3a6c475305101cf79454836d43a1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-05-03 11:58:11</sys_updated_on><table>x_snc_htoken_user_account</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>-1918995829</payload_hash>
+        <record_name>User Accounts</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-03 11:58:11</sys_created_on>
+        <sys_id>155a3a6c475305101cf79454836d43a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18089c8fb570000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-03 11:58:11</sys_updated_on>
+        <type>Module</type>
+        <update_guid>5d5a3a6c8953051074ecd1d21edf40a2</update_guid>
+        <update_guid_history>5d5a3a6c8953051074ecd1d21edf40a2:-1918995829</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-03 12:00:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>ed5d4e5fde9a4a6c943d079039667364</sys_id>
+        <sys_metadata>955a3a6c475305101cf79454836d43a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Accounts</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>sys_ui_module_955a3a6c475305101cf79454836d43a1</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_955a3a6c475305101cf79454836d43a1">155a3a6c475305101cf79454836d43a3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-03 12:00:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

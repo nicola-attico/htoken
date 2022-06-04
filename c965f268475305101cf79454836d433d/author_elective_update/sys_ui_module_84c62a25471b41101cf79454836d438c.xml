@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Token Management">915a3a6c475305101cf79454836d439f</application>
+        <filter/>
+        <name>Fungibles</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_snc_htoken.fungible_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-06 13:06:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>84c62a25471b41101cf79454836d438c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fungibles</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>sys_ui_module_84c62a25471b41101cf79454836d438c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-06 13:06:33</sys_updated_on>
+        <table>x_snc_htoken_fungible</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>sys_ui_module_84c62a25471b41101cf79454836d438c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Token Management">915a3a6c475305101cf79454836d439f</application><filter/><name>Fungibles</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_snc_htoken.fungible_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-05-06 13:06:33</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>84c62a25471b41101cf79454836d438c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Fungibles</sys_name><sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package><sys_policy/><sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope><sys_update_name>sys_ui_module_84c62a25471b41101cf79454836d438c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-05-06 13:06:33</sys_updated_on><table>x_snc_htoken_fungible</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>-283482453</payload_hash>
+        <record_name>Fungibles</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-06 13:06:33</sys_created_on>
+        <sys_id>c4c62a25471b41101cf79454836d438e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>180997aa7320000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-06 13:06:33</sys_updated_on>
+        <type>Module</type>
+        <update_guid>00c62a25a61b411036b9d39c5340228e</update_guid>
+        <update_guid_history>00c62a25a61b411036b9d39c5340228e:-283482453</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-06 13:46:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>3824315b3db24bd2bf26d934e505ccb1</sys_id>
+        <sys_metadata>84c62a25471b41101cf79454836d438c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fungibles</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>sys_ui_module_84c62a25471b41101cf79454836d438c</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_84c62a25471b41101cf79454836d438c">c4c62a25471b41101cf79454836d438e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-06 13:46:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

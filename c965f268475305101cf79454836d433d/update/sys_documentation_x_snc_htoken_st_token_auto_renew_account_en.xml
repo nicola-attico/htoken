@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="auto_renew_account" label="Auto Renew Account" language="en" table="x_snc_htoken_st_token">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>auto_renew_account</element>
+            <help/>
+            <hint/>
+            <label>Auto Renew Account</label>
+            <language>en</language>
+            <name>x_snc_htoken_st_token</name>
+            <plural>Auto Renew Accounts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-30 17:52:27</sys_created_on>
+            <sys_id>355e4b5947b705501cf79454836d43ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Auto Renew Account</sys_name>
+            <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_htoken_st_token_auto_renew_account_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-30 17:52:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="DELETE">
+        <create_roles/>
+        <description/>
+        <display_title>false</display_title>
+        <internal_name>token_common</internal_name>
+        <layout>normal</layout>
+        <name/>
+        <order>100</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-06 13:12:53</sys_created_on>
+        <sys_id>cd18ae65471b41101cf79454836d434e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token Common</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_update_name>item_option_new_set_cd18ae65471b41101cf79454836d434e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-06 13:12:53</sys_updated_on>
+        <title>Token Common</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="htoken">c965f268475305101cf79454836d433d</application>
+        <file_path/>
+        <instance_id>35010653dbcb011091232f17d49619f0</instance_id>
+        <instance_name>hedera</instance_name>
+        <name>item_option_new_set_cd18ae65471b41101cf79454836d434e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set"><item_option_new_set action="INSERT_OR_UPDATE"><create_roles/><description/><display_title>false</display_title><internal_name>token_common</internal_name><layout>normal</layout><name/><order>100</order><read_roles/><set_attributes/><sys_class_name>item_option_new_set</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-05-06 13:12:53</sys_created_on><sys_id>cd18ae65471b41101cf79454836d434e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Token Common</sys_name><sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package><sys_policy/><sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope><sys_update_name>item_option_new_set_cd18ae65471b41101cf79454836d434e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-05-06 13:12:53</sys_updated_on><title>Token Common</title><type>one_to_one</type><write_roles/></item_option_new_set></record_update>]]></payload>
+        <payload_hash>-1713286855</payload_hash>
+        <record_name>Token Common</record_name>
+        <reverted_from/>
+        <source>c165f268475305101cf79454836d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-06 13:12:53</sys_created_on>
+        <sys_id>e038ee65471b41101cf79454836d43f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1809980717e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-06 13:12:53</sys_updated_on>
+        <type>Variable Set</type>
+        <update_guid>2c38ee65411b411078334dab6b837aef</update_guid>
+        <update_guid_history>2c38ee65411b411078334dab6b837aef:-1713286855</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Token Common">2baf3922475b81101cf79454836d4308</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-09 12:49:47</sys_created_on>
+        <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
+        <sys_id>52982572cf774e3e9e7aa95f47c61c04</sys_id>
+        <sys_metadata>cd18ae65471b41101cf79454836d434e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Token Common</sys_name>
+        <sys_package display_value="htoken" source="x_snc_htoken">c965f268475305101cf79454836d433d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="htoken">c965f268475305101cf79454836d433d</sys_scope>
+        <sys_scope_delete display_value="">3bc06ec5c05c48049d3ece962939f010</sys_scope_delete>
+        <sys_update_name>item_option_new_set_cd18ae65471b41101cf79454836d434e</sys_update_name>
+        <sys_update_version display_value="item_option_new_set_cd18ae65471b41101cf79454836d434e">e038ee65471b41101cf79454836d43f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-09 12:49:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

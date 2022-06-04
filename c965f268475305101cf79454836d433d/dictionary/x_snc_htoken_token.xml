@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Token" max_length="40" name="x_snc_htoken_token" sizeclass="1" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;return current.token_id;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Token" max_length="32" name="token" reference="x_snc_htoken_st_token" type="reference" virtual="true"/>
+        <element display="true" label="Token Id" max_length="20" name="token_id" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="FUNGIBLE_COMMON" value="FUNGIBLE_COMMON"/>
+                <element inactive_on_update="false" label="NONFUNGIBLE_UNIQUE" value="NONFUNGIBLE_UNIQUE"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="token"/>
+        </index>
+    </element>
+</database>
